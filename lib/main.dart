@@ -325,13 +325,13 @@ Widget checkRow(bool v, ValueChanged<bool?>? f, Widget label, {bool dark = false
     child: Row(children: [SizedBox(width: 24, height: 24, child: Checkbox(value: v, onChanged: f, activeColor: dark ? admAcc : pine)), const SizedBox(width: 8), Expanded(child: label)]));
 
 // ───────────────────────── App root ─────────────────────────
-void main() => runApp(const CareNearApp());
+void main() => runApp(const NearCareApp());
 
-class CareNearApp extends StatelessWidget {
-  const CareNearApp({super.key});
+class NearCareApp extends StatelessWidget {
+  const NearCareApp({super.key});
   @override
   Widget build(BuildContext c) => MaterialApp(
-        title: 'CareNear', debugShowCheckedModeBanner: false,
+        title: 'NearCare', debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true, colorScheme: ColorScheme.fromSeed(seedColor: pine), scaffoldBackgroundColor: Colors.white,
           textTheme: ThemeData.light().textTheme.apply(bodyColor: ink, displayColor: ink),
@@ -340,6 +340,8 @@ class CareNearApp extends StatelessWidget {
         home: const Root(),
       );
 }
+
+typedef CareNearApp = NearCareApp;
 
 class Root extends StatelessWidget {
   const Root({super.key});
@@ -411,7 +413,7 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext c) => Column(children: [
         const Head(top: 60, bottom: 40, Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text('CareNear', style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700)),
+          Text('NearCare', style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700)),
           SizedBox(height: 6),
           Text('Find a doctor nearby. Book in a minute.', style: TextStyle(color: Colors.white70)),
         ])),
@@ -421,7 +423,7 @@ class Welcome extends StatelessWidget {
           gap(10),
           Btn('I run a clinic or hospital', () => app.go(Scr.alog), kind: 2),
           gap(20),
-          note(const Text('Demo build with sample doctors and slots. CareNear suggests specialties; it does not diagnose.')),
+          note(const Text('Demo build with sample doctors and slots. NearCare suggests specialties; it does not diagnose.')),
         ])),
       ]);
 }
@@ -471,7 +473,7 @@ class _PLoginState extends State<PLogin> {
   Widget build(BuildContext c) => Column(children: [
         Head(top: 28, bottom: 20, Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           backBtn(() => app.go(Scr.welcome)),
-          const Text('CareNear', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
+          const Text('NearCare', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
           gap(8),
           Text(up ? 'Create your account' : 'Welcome back', style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700)),
           gap(6),
@@ -761,7 +763,7 @@ class _MapTabState extends State<MapTab> {
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                userAgentPackageName: 'com.carenear.app',
+                userAgentPackageName: 'com.nearcare.app',
                 maxZoom: 19,
               ),
               CircleLayer(

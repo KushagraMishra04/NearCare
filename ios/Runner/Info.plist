@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Carenear</string>
+	<string>NearCare</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>carenear</string>
+	<string>NearCare</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -67,8 +67,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>CareNear needs your location to show nearby doctors and calculate travel distance.</string>
+	<string>NearCare needs your location to show nearby doctors and calculate travel distance.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>CareNear needs your location to show nearby doctors and calculate travel distance.</string>
+	<string>NearCare needs your location to show nearby doctors and calculate travel distance.</string>
 </dict>
 </plist>

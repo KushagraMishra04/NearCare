@@ -1,6 +1,6 @@
 {
-    "name": "carenear",
-    "short_name": "carenear",
+    "name": "NearCare",
+    "short_name": "NearCare",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
